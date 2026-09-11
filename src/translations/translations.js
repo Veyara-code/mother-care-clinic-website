@@ -25,7 +25,7 @@ const translations = {
   },
   "hero.bookAppointment": { en: "Book Appointment", ur: "اپائنٹمنٹ بک کریں" },
   "hero.whatsapp": { en: "WhatsApp Us", ur: "واٹس ایپ کریں" },
-  "hero.statValue": { en: "5,000+", ur: "5,000+" },
+  "hero.statValue": { en: "50,000+", ur: "50,000+" },
   "hero.statLabel": { en: "Safe deliveries", ur: "محفوظ ولادتیں" },
 
   /* ---------- STATS ---------- */
