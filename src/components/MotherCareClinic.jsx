@@ -3,6 +3,7 @@ import {
   Menu, X, Phone, MessageCircle, Mail, MapPin, Clock,
   Heart, Baby, Stethoscope, Activity, ShieldCheck, Users,
   Star, ChevronDown, ChevronRight, CheckCircle2, Calendar, Languages,
+  HeartPulse,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/translations/translations";
@@ -621,6 +622,7 @@ const SERVICE_KEYS = [
   { key: "familyPlanning", icon: ShieldCheck },
   { key: "dilationCurettage", icon: Stethoscope },
   { key: "postpartum", icon: Heart },
+  { key: "ctg", icon: HeartPulse },
 ];
 
 function ServiceCard({ icon: Icon, title, desc, index }) {
@@ -678,7 +680,7 @@ function Services() {
             </p>
           </div>
         </Reveal>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 22 }} className="mc-services-grid">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 22 }} className="mc-services-grid">
           {SERVICE_KEYS.map((s, i) => (
             <ServiceCard
               key={s.key}
@@ -691,9 +693,8 @@ function Services() {
         </div>
       </div>
       <style>{`
-        .mc-services-grid > * { flex: 1 1 calc(25% - 22px); min-width: 240px; }
-        @media (max-width: 1000px) { .mc-services-grid > * { flex: 1 1 calc(50% - 22px) !important; } }
-        @media (max-width: 560px) { .mc-services-grid > * { flex: 1 1 100% !important; } }
+        @media (max-width: 1000px) { .mc-services-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 560px) { .mc-services-grid { grid-template-columns: 1fr !important; } }
       `}</style>
     </section>
   );
