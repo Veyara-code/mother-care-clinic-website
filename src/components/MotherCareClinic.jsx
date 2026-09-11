@@ -556,8 +556,8 @@ function About() {
               borderRadius: 24, overflow: "hidden", boxShadow: "0 24px 60px rgba(26,46,53,0.14)",
             }}>
               <img
-                src="https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=900&q=80"
-                alt="Clinic consultation room where doctors meet patients"
+                src="/about-clinic.jpg"
+                alt="Modern ultrasound diagnostic equipment at Mother Care Clinic"
                 style={{ width: "100%", display: "block", aspectRatio: "4/3", objectFit: "cover" }}
               />
             </div>
