@@ -94,6 +94,11 @@ const translations = {
     en: "Recovery support and check-ins for the weeks that matter most after delivery.",
     ur: "ڈیلیوری کے بعد سب سے زیادہ اہم ہفتوں کے لیے بحالی کی معاونت اور جانچ۔",
   },
+  "service.ctg.title": { en: "Cardiotocography (CTG)", ur: "کارڈیوٹوکوگرافی (سی ٹی جی)" },
+  "service.ctg.desc": {
+    en: "Continuous monitoring of your baby's heartbeat and your contractions to check on your baby's wellbeing during pregnancy and labor.",
+    ur: "حمل اور دورانِ زچگی بچے کی خیریت جانچنے کے لیے بچے کی دل کی دھڑکن اور آپ کے درد زہ کی مسلسل نگرانی۔",
+  },
 
   /* ---------- WHY CHOOSE US ---------- */
   "why.eyebrow": { en: "Why choose us", ur: "ہمیں کیوں چنیں" },
