@@ -3,7 +3,7 @@ import {
   Menu, X, Phone, MessageCircle, Mail, MapPin, Clock,
   Heart, Baby, Stethoscope, Activity, ShieldCheck, Users,
   Star, ChevronDown, ChevronRight, CheckCircle2, Calendar, Languages,
-  HeartPulse,
+  HeartPulse, HeartHandshake,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/translations/translations";
@@ -621,7 +621,7 @@ const SERVICE_KEYS = [
   { key: "gynecology", icon: Users },
   { key: "familyPlanning", icon: ShieldCheck },
   { key: "dilationCurettage", icon: Stethoscope },
-  { key: "postpartum", icon: Heart },
+  { key: "postpartum", icon: HeartHandshake },
   { key: "ctg", icon: HeartPulse },
 ];
 
@@ -856,6 +856,7 @@ const DOCTOR_OPTIONS = DOCTORS.map((d) => ({ value: d.name, labelKey: `doctor.${
 const SERVICE_OPTIONS = [
   ...SERVICE_KEYS.map((s) => ({ value: s.key, labelKey: `service.${s.key}.title` })),
   { value: "csection", labelKey: "service.csection.title" },
+  { value: "medicalCondition", labelKey: "service.medicalCondition.title" },
 ];
 
 function AppointmentForm({ formRef }) {
@@ -1330,7 +1331,7 @@ function Contact() {
             <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
               {[
                 { icon: MapPin, title: t("contact.address.title"), lines: [t("contact.address.line1"), t("contact.address.line2")] },
-                { icon: Phone, title: t("contact.phone.title"), lines: [t("contact.phone.line")] },
+                { icon: Phone, title: t("contact.phone.title"), lines: [t("contact.phone.line1"), t("contact.phone.line2"), t("contact.phone.line3"), t("contact.phone.line4")] },
                 { icon: MessageCircle, title: t("contact.whatsapp.title"), lines: [t("contact.whatsapp.line")] },
                 { icon: Mail, title: t("contact.email.title"), lines: [t("contact.email.line")] },
                 { icon: Clock, title: t("contact.hours.title"), lines: [t("contact.hours.line1"), t("contact.hours.line2")] },
@@ -1428,7 +1429,7 @@ function Footer() {
           </div>
           <div>
             <h5 style={{ fontFamily: FONT_BODY, fontSize: 13.5, fontWeight: 700, color: "#fff", marginBottom: 16, letterSpacing: "0.04em" }}>{t("footer.contact")}</h5>
-            <div style={{ fontFamily: FONT_BODY, fontSize: 13.5, color: "#9FB6BC", marginBottom: 10 }}>{t("contact.phone.line")}</div>
+            <div style={{ fontFamily: FONT_BODY, fontSize: 13.5, color: "#9FB6BC", marginBottom: 10 }}>{t("footer.phone.line")}</div>
             <div style={{ fontFamily: FONT_BODY, fontSize: 13.5, color: "#9FB6BC", marginBottom: 10 }}>{t("contact.email.line")}</div>
             <div style={{ fontFamily: FONT_BODY, fontSize: 13.5, color: "#9FB6BC" }}>{t("contact.address.line1")}</div>
           </div>
